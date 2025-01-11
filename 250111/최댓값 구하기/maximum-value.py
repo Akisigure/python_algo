@@ -6,19 +6,6 @@ maxi = -9999
 
 # or 비교일경우 가장 앞에서 True가 되면 통과해버림.
 
-if a > b :
-    maxi = a
-elif a > c:
-    maxi = a
+print(max(a,b,c))
 
-if b > a :
-    maxi = b
-elif b > c :
-    maxi = c
-
-if c > a:
-    maxi = c
-elif c > b:
-    maxi = c
-
-print(maxi)
+# a b c
