@@ -10,5 +10,11 @@ elif b > a and b < c:
     mid = b
 elif c > a and c < b :
     mid = c
+elif a < b and a > c :
+    mid = a
+elif b < a and b > c :
+    mid = b
+elif c < a and c > b :
+    mid = c
 
 print(mid)
