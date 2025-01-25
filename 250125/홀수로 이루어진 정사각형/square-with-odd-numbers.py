@@ -1,10 +1,17 @@
 n = int(input())
+a = 11
+b = a
+cnt = 0
 
-a = 9
-    
 for i in range(n):
     for j in range(n):
+        print(a,end=' ')
+        cnt += 1
         a += 2
-        print(a, end=' ')
+        if cnt == 1:
+            b = a
     print()
-    a -= 8
+    cnt = 0
+    a = b
+    
+        
