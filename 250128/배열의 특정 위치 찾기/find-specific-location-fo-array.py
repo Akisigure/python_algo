@@ -9,9 +9,9 @@ odd_cnt = 0
 
 for i in range(n):
     
-    if arr[i] % 2 == 0:
+    if i % 2 != 0:
         even_summary += arr[i]
-    if arr[i] % 3 == 0:
+    if i == 2 or i == 5 or i == 8:
         odd_summary += arr[i]
         odd_cnt += 1
 
