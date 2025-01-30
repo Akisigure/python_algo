@@ -1,17 +1,13 @@
 a,b = map(int,input().split())
-
 a_arr = list(map(int,input().split()))
 b_arr = list(map(int,input().split()))
+res = ''
 
-ln = 0
+for i in range(a - b + 1):
+    if a_arr[i:i+b] == b_arr:
+        res = 'Yes'
+        break
+    else :
+        res = 'No'
 
-for i in range(b):
-    for j in range(a):
-        if a_arr[j] == b_arr[i] :
-            ln += 1
-
-if ln != b :
-    print('Yes')
-else :
-    print('No')
-    
+print(res)   
