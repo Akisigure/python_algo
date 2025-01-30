@@ -3,6 +3,9 @@ a_arr = list(map(int,input().split()))
 b_arr = list(map(int,input().split()))
 res = ''
 
+if b > a :
+    res = 'No'
+
 for i in range(a - b + 1):
     if a_arr[i:i+b] == b_arr:
         res = 'Yes'
