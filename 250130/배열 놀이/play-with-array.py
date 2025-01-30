@@ -11,6 +11,9 @@
 
 # x부터 y까지 공백으로 구분하여 출력
 
+#case3 : 98이 없는데 이상한 수 출력됨
+
+
 cnt = 0
 
 n, q = list(map(int,input().split()))
@@ -28,12 +31,17 @@ for i in range(q):
     if que[0] == 1 :
         a = que[1]
         print(temp[a])
+
     if que[0] == 2 :
         b = que[1]
         for j in range(1,n+1):
             if b == temp[j]:
                 print(j)
                 break
+            elif b not in temp:
+                print('0')
+                break
+            
     if que[0] == 3 :
         s,e = que[1],que[2]
         for i in range(s,e+1):
