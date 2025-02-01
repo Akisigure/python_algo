@@ -30,4 +30,4 @@ print()
 for i in i_avg :
     print(f'{i:.1f}',end=' ')
 print()
-print(t_avg)
+print(f'{t_avg:.1f}')
