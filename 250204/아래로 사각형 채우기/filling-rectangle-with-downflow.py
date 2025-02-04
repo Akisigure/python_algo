@@ -8,6 +8,6 @@ for i in range(n):
         if j == 0 :
             num = i + 1
         arr[i][j] = num
-        num += 5
+        num += n
         print(arr[i][j],end=' ')
     print()
