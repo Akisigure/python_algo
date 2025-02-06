@@ -7,5 +7,5 @@ if a_len > b_len :
     print(a,a_len)
 if b_len > a_len :
     print(b,b_len)
-else :
+if a_len == b_len:
     print('same')
