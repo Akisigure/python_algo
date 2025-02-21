@@ -1,15 +1,15 @@
-
-lst = list(map(str,input()))
+lst = list(map(str, input()))
 stack = []
-stack_2 = []
+dic = {')': '('}
 # Write your code here!
 res = 'Yes'
 for i in range(len(lst)):
-    if lst[i] == '(':
-        stack.append(lst[i])
-    if lst[i] == ')':
-        stack_2.append(lst[i])
+    stack.append(lst[i])
+    if stack[-1] != lst[i]:
+        stack.pop()
 
-if len(stack) != len(stack_2):
+if stack:
     res = 'No'
+
 print(res)
+
