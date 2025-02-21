@@ -8,7 +8,8 @@ for i in range(len(lst)):
     stack.append(lst[i])
     if stack and stack[-1] == ')':
         stack.pop()
-        stack.pop()
+        if stack:
+            stack.pop()
 
 if stack:
     res = 'No'
