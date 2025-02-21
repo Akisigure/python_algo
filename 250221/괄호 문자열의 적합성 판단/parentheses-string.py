@@ -5,13 +5,18 @@ vali = ['(', ')']
 res = 'Yes'
 for i in range(len(lst)):
 
-    stack.append(lst[i])
-    if stack and stack[-1] == ')':
-        stack.pop()
-        if stack:
-            stack.pop()
+    for ch in lst:
+        if ch == '(':
+            stack.append(ch)
+        elif ch == ')':
+            if stack:
+                stack.pop()
+            else:
+                res = 'No'
+                break
 
 if stack:
     res = 'No'
 
 print(res)
+
