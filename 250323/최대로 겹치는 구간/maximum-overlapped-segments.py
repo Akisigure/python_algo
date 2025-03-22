@@ -6,7 +6,7 @@ for i in range(n):
     a,b = map(int,input().split())
     a += 100
     b += 100
-    for j in range(a,b + 1):
+    for j in range(a,b):
         arr[j] += 1
 
 for i in range(1, len(arr) - 1):
