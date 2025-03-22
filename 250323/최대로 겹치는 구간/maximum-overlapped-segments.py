@@ -4,14 +4,10 @@ mv = -99999
 
 for i in range(n):
     a,b = map(int,input().split())
-    a += 100
-    b += 100
+    a += 101
+    b += 101
     for j in range(a,b):
         arr[j] += 1
-
-for i in range(1, len(arr) - 1):
-    if arr[i] == arr[i + 1]:
-        if mv < arr[i]:
-            mv = arr[i]
+        mv = max(mv,arr[j])
 
 print(mv)
