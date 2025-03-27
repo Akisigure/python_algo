@@ -36,6 +36,10 @@ res = -1
 
 visited[r1 - 1][c1 - 1] = True
 
+if n == 1:
+    res = 0
+
+
 for i in range(n):
     for j in range(n):
         if arr[i][j] == 1:
