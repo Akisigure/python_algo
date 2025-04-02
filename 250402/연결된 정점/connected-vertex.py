@@ -36,9 +36,8 @@ for i in range(m):
         union(a,b)
     if lst[0] == 'y':
         val = int(lst[1])
-        for v in range(len(node)):
-            find_set(v)
-        temp = []
+        # for v in range(len(node)):
+        #     find_set(v)
         for j in range(len(node)):
             if node[j] == val:
                 cnt += 1
