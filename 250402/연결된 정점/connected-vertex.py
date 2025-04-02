@@ -16,11 +16,11 @@ def find_set(x):
 def union(x,y):
     px = find_set(x)
     py = find_set(y)
-
-    if node[px] > node[py]:
-        node[px] = py
-    if node[px] < node[py]:
-        node[py] = px
+    if px != py:
+        if px < py:
+            node[py] = px
+        else:
+            node[px] = py
 
 
 for k in range(1, n + 1):
@@ -36,9 +36,10 @@ for i in range(m):
         union(a,b)
     if lst[0] == 'y':
         val = int(lst[1])
-        # for v in range(len(node)):
-        #     find_set(v)
-        for j in range(len(node)):
-            if node[j] == val:
-                cnt += 1
+        root = find_set(val)
+
+        for v in range(1, n + 1):
+            find_set(v)
+        cnt = node.count(root)
         print(cnt)
+
