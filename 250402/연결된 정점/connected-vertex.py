@@ -6,6 +6,7 @@ n, m = map(int,input().split())
 
 node = [0] * (n + 1)
 
+size = [1] * (n + 1)
 
 def make_set(x):
     node[x] = x
@@ -23,8 +24,10 @@ def union(x,y):
     if px != py:
         if px < py:
             node[py] = px
+            size[px] += size[py]
         else:
             node[px] = py
+            size[py] += size[px]
 
 
 for k in range(1, n + 1):
@@ -40,10 +43,5 @@ for i in range(m):
         union(a,b)
     if lst[0] == 'y':
         val = int(lst[1])
-        root = find_set(val)
-
-        for v in range(1, n + 1):
-            find_set(v)
-        cnt = node.count(root)
-        print(cnt)
-
+        root = find_set(int(lst[1]))
+        print(size[root])
